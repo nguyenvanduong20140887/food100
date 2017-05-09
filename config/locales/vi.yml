@@ -22,11 +22,11 @@
 en:
   pages:
     home:
-      home: "Home"
-      introduce: "This would be a static home page in a Rails application"
-      myapp: "My App."
+      home: "Trang chủ"
+      introduce: "Đây là trang chủ ứng dụng của Rails"
+      myapp: "ứng dụng của tôi."
     help:
-      help: "Help"
+      help: "Trợ giúp"
     about:
-      about: "About"
+      about: "Thông tin"
   title: "Food100"
