@@ -1,0 +1,8 @@
+vi:
+  pages:
+    home:
+      title: "Trang chủ"
+      content: "Đây là trang chủ của ứng dụng Rails"
+      appname: "Ứng dụng của tôi."
+    about:
+      title: "Thêm"
