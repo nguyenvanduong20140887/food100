@@ -25,8 +25,25 @@ en:
       home: "Home"
       introduce: "This would be a static home page in a Rails application"
       myapp: "My App."
+      order: "Order now!"
+      title: "Welcome to the Food App"
+      logo: "logo"
     help:
       help: "Help"
     about:
       about: "About"
   title: "Food100"
+  layouts:
+    footer:
+      footer: "<p>
+        The <a href=\"http://www.railstutorial.org/\">App</a>
+        is designed by <a href=\"https://www.chatwork.com/#!rid75672248\">Food100 team</a>
+        </p>"
+      about: "About"
+      contact: "Contact"
+      new: "News"
+    header:
+      title: "Food100"
+      login: "Log in"
+      help: "Help"
+      home: "Home"

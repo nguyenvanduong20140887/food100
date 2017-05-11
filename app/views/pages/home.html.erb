@@ -1,4 +1,6 @@
-<% provide :title, t(".home") %>
-<h1><%= t ".home" %></h1>
-<p><%= t ".introduce" %></p>
-<p>© <%= Date.today.year %> <%= t".myapp" %> </p>
+<div class="center jumbotron">
+  <h1><%= t ".title" %></h1>
+  <%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("food.png", alt: t(".logo")), "https://eat.vn/" %>
