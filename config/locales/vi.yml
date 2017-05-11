@@ -19,14 +19,31 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+vi:
   pages:
     home:
       home: "Trang chủ"
       introduce: "Đây là trang chủ ứng dụng của Rails"
       myapp: "ứng dụng của tôi."
+      order: "Dat mon ngay!"
+      title: "Chao mung ban den voi trang mon an"
+      logo: "logo"
     help:
       help: "Trợ giúp"
     about:
       about: "Thông tin"
   title: "Food100"
+  layouts:
+    footer:
+      footer: "<p>
+        <a href=\"http://www.railstutorial.org/\">Ứng dụng</a>
+        Được thiết kế bởi <a href=\"https://www.chatwork.com/#!rid75672248\">Food100 team</a>
+        </p>"
+      about: "Thông tin"
+      contact: "Lien he"
+      new: "Tin tuc"
+    header:
+      title: "Food100"
+      login: "Dang nhap"
+      help: "Tro giup"
+      home: "Trang chu"
