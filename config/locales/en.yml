@@ -47,3 +47,20 @@ en:
       login: "Log in"
       help: "Help"
       home: "Home"
+      user: "Users"
+      profile: "Profile"
+      setting: "Settings"
+      log_out: "Log Out"
+      account: "Account"
+  sessions:
+    new:
+      login: "Login"
+  flash:
+    danger:
+      invalid_params: "Invalid email/password combination"
+      find_user: "User not found!"
+    success:
+      login: "Login success"
+  users:
+    new:
+      new: "New"
