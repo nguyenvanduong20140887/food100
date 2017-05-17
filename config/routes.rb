@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     get "/:locale", to: "pages#home"
     resources :users
+    resources :foods, only: [:index, :show]
   end
 end

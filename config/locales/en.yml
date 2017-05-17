@@ -42,6 +42,7 @@ en:
     danger:
       invalid_params: "Invalid email/password combination"
       find_user: "User not found!"
+      find_food: "Food not found!"
     success:
       login: "Login success"
   users:
@@ -49,7 +50,20 @@ en:
       signup: "Sign up"
       submit: "Create my account"
       confirm_pass: "Confirmation"
+    index:
+      title: "All admins"
+      image: "Image"
+      name: "Name"
   shared:
     error_messages:
       content: "The form contains"
       error: "error"
+  foods:
+    index:
+      title: "All foods"
+      image: "Image"
+      name: "Name"
+    food:
+      order: "Order"
+    show:
+      order: "Order"
