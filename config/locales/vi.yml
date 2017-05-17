@@ -42,6 +42,7 @@ vi:
     danger:
       invalid_params: "Kết hợp email / mật khẩu không hợp lệ"
       find_user: "Người dùng không tìm thấy!"
+      find_food: "Mon an không tìm thấy!"
     success:
       login: "Đăng nhập thành công"
   users:
@@ -49,7 +50,20 @@ vi:
       signup: "Đăng ký"
       submit: "Tạo tài khoản của tôi"
       confirm_pass: "Xác nhận"
+    index:
+      title: "Tat ca admin"
+      image: "Hinh anh"
+      name: "Ten"
   shared:
     error_messages:
       content: "Biểu mẫu có chứa"
       error: "lỗi"
+  foods:
+    index:
+      title: "Tat ca mon an"
+      image: "Hinh anh"
+      name: "Ten"
+    food:
+      order: "Dat hang"
+    show:
+      order: "Dat hang"
