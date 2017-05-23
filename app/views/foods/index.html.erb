@@ -1,13 +1,37 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
-<%= will_paginate %>
-<table class="table">
-  <thead>
-    <tr>
-      <th><%= t ".image" %></th>
-      <th><%= t ".name" %></th>
-    </tr>
-  </thead>
-  <%= render @foods %>
-</table>
-<%= will_paginate %>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <%= form_tag foods_path, method: :get, id: "search-form" do %>
+      <p>
+        <%= text_field_tag :search, params[:search], class: "text_field_tag_style",
+          placeholder: t(".search"), size: 15 %>
+        <%= submit_tag t(".search"), class: "btn btn-lg btn-primary" %>
+      </p>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t ".image" %></th>
+          <th><%= t ".name" %></th>
+        </tr>
+      </thead>
+    <%= render @foods %>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t ".name" %></th>
+          <th><%= t ".price" %></th>
+        </tr>
+      </thead>
+      <%= render "foods/order" %>
+    </table>
+  </div>
+</div>

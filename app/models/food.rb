@@ -11,4 +11,11 @@ class Food < ApplicationRecord
   validates :image, presence: true
   validates :description, presence: true,
     length: {maximum: Settings.max_size_description}
+
+  class << self
+
+    def search search
+      where "name LIKE ?", "%#{search}%"
+    end
+  end
 end

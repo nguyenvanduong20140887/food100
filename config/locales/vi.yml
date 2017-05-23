@@ -63,6 +63,8 @@ vi:
       title: "Tat ca mon an"
       image: "Hinh anh"
       name: "Ten"
+      search: "Tim kiem"
+      price: "Gia"
     food:
       order: "Dat hang"
     show:

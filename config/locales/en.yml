@@ -63,6 +63,8 @@ en:
       title: "All foods"
       image: "Image"
       name: "Name"
+      search: "Search"
+      price: "Price"
     food:
       order: "Order"
     show:
