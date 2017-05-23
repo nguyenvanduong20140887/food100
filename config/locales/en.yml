@@ -34,6 +34,7 @@ en:
       log_out: "Log Out"
       account: "Account"
       signup: "Sign Up"
+      foods: "Edit info foods"
   sessions:
     new:
       login: "Login"
@@ -43,6 +44,7 @@ en:
       invalid_params: "Invalid email/password combination"
       find_user: "User not found!"
       find_food: "Food not found!"
+      login: "Do you admin? Please login"
     success:
       login: "Login success"
   users:
@@ -65,7 +67,26 @@ en:
       name: "Name"
       search: "Search"
       price: "Price"
+      new: "New food"
     food:
       order: "Order"
     show:
       order: "Order"
+      edit: "edit"
+      deleted: "delete"
+      confirm: "You sure?"
+    profile_updated: "Profile updated"
+    profile_update_failed: "Profile update failed"
+    food_deleted: "Food deleted"
+    deleted_failed: "Delete failed!"
+    create_success: "Create success"
+    create_failed: "Create failed!"
+    login: "Do you admin? Please login"
+    new:
+      title: "New food"
+    edit:
+      header: "Edit food"
+      title: "Update food profile"
+      change: "change"
+    form:
+      save_change: "Save changes"

@@ -4,15 +4,15 @@ vi:
       home: "Trang chủ"
       introduce: "Đây là trang chủ ứng dụng của Rails"
       myapp: "ứng dụng của tôi."
-      order: "Dat mon ngay!"
-      title: "Chao mung ban den voi trang mon an"
-      logo: "logo"
+      order: "Đặt món ngay"
+      title: "Chào mừng bạn đến với trang món ăn của chúng tôi"
+      logo: "nhãn"
     help:
       help: "Trợ giúp"
     about:
       about: "Thông tin"
     contact:
-      contact: "Lien he"
+      contact: "Liên hệ"
   title: "Food100"
   layouts:
     footer:
@@ -21,19 +21,20 @@ vi:
         Được thiết kế bởi <a href=\"https://www.chatwork.com/#!rid75672248\">Food100 team</a>
         </p>"
       about: "Thông tin"
-      contact: "Lien he"
-      new: "Tin tuc"
+      contact: "Liên hệ"
+      new: "Tin tức"
     header:
       title: "Food100"
-      login: "Dang nhap"
-      help: "Tro giup"
-      home: "Trang chu"
+      login: "Đăng nhập"
+      help: "Trợ giúp"
+      home: "Trang chủ"
       admin: "Quản trị viên"
       profile: "Hồ sơ"
       setting: "Cài đặt"
       log_out: "Đăng xuất"
       account: "Tài khoản"
       signup: "Đăng ký"
+      foods: "Chỉnh sửa thông tin món ăn"
   sessions:
     new:
       login: "Đăng nhập"
@@ -42,7 +43,8 @@ vi:
     danger:
       invalid_params: "Kết hợp email / mật khẩu không hợp lệ"
       find_user: "Người dùng không tìm thấy!"
-      find_food: "Mon an không tìm thấy!"
+      find_food: "Món ăn không tìm thấy!"
+      login: "Bạn có phải quản trị viên hay không? Vui lòng đăng nhập"
     success:
       login: "Đăng nhập thành công"
   users:
@@ -51,21 +53,40 @@ vi:
       submit: "Tạo tài khoản của tôi"
       confirm_pass: "Xác nhận"
     index:
-      title: "Tat ca admin"
-      image: "Hinh anh"
-      name: "Ten"
+      title: "Tất cả quản trị viên"
+      image: "Hình ảnh"
+      name: "Tên"
   shared:
     error_messages:
       content: "Biểu mẫu có chứa"
       error: "lỗi"
   foods:
     index:
-      title: "Tat ca mon an"
-      image: "Hinh anh"
-      name: "Ten"
-      search: "Tim kiem"
-      price: "Gia"
+      title: "Tất cả món ăn"
+      image: "Hình ảnh"
+      name: "Tên"
+      search: "Tìm kiếm"
+      price: "Giá"
+      new: "Món ăn mới"
     food:
-      order: "Dat hang"
+      order: "Đặt hàng"
     show:
-      order: "Dat hang"
+      order: "Đặt hàng"
+      edit: "sửa"
+      deleted: "xóa"
+      confirm: "Bạn chắc chắn chứ?"
+    profile_updated: "Cập nhật thông tin thành công"
+    profile_update_failed: "Cập nhật thông tin bị lỗi"
+    food_deleted: "Xóa món ăn thành công"
+    deleted_failed: "Xóa món ăn thất bại"
+    create_success: "Tạo món ăn thành công"
+    create_failed: "Tạo món ăn thất bại"
+    login: "Bạn có phải quản trị viên hay không? Vui lòng đăng nhập"
+    new:
+      title: "Tạo món ăn mới"
+    edit:
+      header: "Chỉnh sửa thông tin món ăn"
+      title: "Cập nhật thông tin món ăn"
+      change: "thay đổi"
+    form:
+      save_change: "Lưu thay đổi"

@@ -1,5 +1,8 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
+<% if logged_in? %>
+  <%= link_to t(".new"), new_food_path, class: "btn btn-lg btn-primary" %>
+<% end %>
 <div class="row">
   <div class="col-md-3">
     <div class="form-group">
@@ -23,15 +26,17 @@
     <%= render @foods %>
     </table>
   </div>
-  <div class="col-md-4">
-    <table class="table">
-      <thead>
-        <tr>
-          <th><%= t ".name" %></th>
-          <th><%= t ".price" %></th>
-        </tr>
-      </thead>
-      <%= render "foods/order" %>
-    </table>
-  </div>
+  <% unless logged_in? %>
+    <div class="col-md-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t ".name" %></th>
+            <th><%= t ".price" %></th>
+          </tr>
+        </thead>
+        <%= render "foods/order" %>
+      </table>
+    </div>
+  <% end %>
 </div>

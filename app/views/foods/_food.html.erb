@@ -1,5 +1,7 @@
 <tr>
   <td><%= gravatar_for food, size: Settings.size %></td>
   <td><%= link_to food.name, food %></td>
-  <td><%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %></td>
+  <% unless logged_in? %>
+    <td><%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %></td>
+  <% end %>
 </tr>
