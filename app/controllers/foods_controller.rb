@@ -2,7 +2,11 @@ class FoodsController < ApplicationController
   before_action :load_food, only: [:show]
 
   def index
-    @foods = Food.paginate page: params[:page]
+    @foods = Food.search(params[:search]).order name: :asc
+    if @foods
+    else
+      @foods = Food.all.order name: :asc
+    end
   end
 
   def show

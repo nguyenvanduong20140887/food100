@@ -1,12 +1,19 @@
 <% provide :title, @food.name %>
-<table class="table">
-  <thead>
-    <tr>
-      <td><%= gravatar_for @food, size: 50 %></td>
-      <td><%= @food.name %></td>
-      <td><%= @food.price %></td>
-      <td><%= @food.description %></td>
-      <td><%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %></td>
-    </tr>
-  </thead>
-</table>
+<div class="row">
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <td><%= gravatar_for @food, size: 50 %></td>
+          <td><%= @food.name %></td>
+          <td><%= @food.price %></td>
+          <td><%= @food.description %></td>
+          <td><%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %></td>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <%= render "foods/order" %>
+  </div>
+</div>
