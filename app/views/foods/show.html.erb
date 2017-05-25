@@ -8,12 +8,25 @@
           <td><%= @food.name %></td>
           <td><%= @food.price %></td>
           <td><%= @food.description %></td>
-          <td><%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %></td>
+          <td>
+            <% if logged_in? %>
+              <%= link_to t(".edit"), edit_food_path(@food) %>
+              | <%= link_to t(".delete"), @food, method: :delete,
+                data: {confirm: t(".confirm")} %>
+            <% end %>
+          </td>
+          <td>
+            <% unless logged_in? %>
+              <%= link_to t(".order"), "#", class: "btn btn-lg btn-primary" %>
+            <% end %>
+          </td>
         </tr>
       </thead>
     </table>
   </div>
-  <div class="col-md-4">
-    <%= render "foods/order" %>
-  </div>
+  <% unless logged_in? %>
+    <div class="col-md-4">
+      <%= render "foods/order" %>
+    </div>
+  <% end %>
 </div>

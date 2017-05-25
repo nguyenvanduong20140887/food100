@@ -1,0 +1,17 @@
+<%= form_for @food do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :price %>
+  <%= f.text_field :price, class: "form-control" %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image, class: "form-control" %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, class: "form-control" %>
+
+  <%= f.submit t(".save_change"), class: "btn btn-primary" %>
+<% end %>

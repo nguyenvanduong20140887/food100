@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
-  before_action :load_food, only: [:show]
+  before_action :logged_in_user, except: [:index, :show, :destroy]
+  before_action :load_food, except: [:index, :new, :create]
 
   def index
     @foods = Food.search(params[:search]).order name: :asc
@@ -9,7 +10,44 @@ class FoodsController < ApplicationController
     end
   end
 
+  def new
+    @food = Food.new
+  end
+
+  def create
+    @food = Food.new food_params
+    if @food.save
+      flash[:success] = t "foods.create_success"
+      redirect_to @food
+    else
+      flash[:danger] = t "foods.create_failed"
+      redirect_to foods_url
+    end
+  end
+
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @food.update_attributes food_params
+      flash[:success] = t "foods.profile_updated"
+      redirect_to @food
+    else
+      flash[:danger] = t "foods.profile_update_failed"
+      render :show
+    end
+  end
+
+  def destroy
+    if @food.destroy
+      flash[:success] = t "foods.food_deleted"
+    else
+      flash[:danger] = t "foods.delete_failed"
+    end
+    redirect_to foods_url
   end
 
   private
