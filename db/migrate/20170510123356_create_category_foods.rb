@@ -6,5 +6,8 @@ class CreateCategoryFoods < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :category_foods, :food_id
+    add_index :category_foods, :category_id
+    add_index :category_foods, [:food_id, :category_id], unique: true
   end
 end

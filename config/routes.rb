@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     get "/:locale", to: "pages#home"
     resources :users
     resources :foods
+    resources :categories
   end
 end

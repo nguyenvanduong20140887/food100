@@ -3,11 +3,12 @@ class FoodsController < ApplicationController
   before_action :load_food, except: [:index, :new, :create]
 
   def index
-    @foods = Food.search(params[:search]).order name: :asc
-    if @foods
-    else
-      @foods = Food.all.order name: :asc
-    end
+    @foods =
+      if params[:search]
+        Food.search(params[:search]).order_in_scope
+      else
+        Food.order_in_scope
+      end
   end
 
   def new

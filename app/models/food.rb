@@ -12,10 +12,6 @@ class Food < ApplicationRecord
   validates :description, presence: true,
     length: {maximum: Settings.max_size_description}
 
-  class << self
-
-    def search search
-      where "name LIKE ?", "%#{search}%"
-    end
-  end
+  scope :search, -> search {where "name LIKE ?", "%#{search}%"}
+  scope :order_in_scope, -> {Food.all.order name: :asc}
 end

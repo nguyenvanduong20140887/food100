@@ -4,7 +4,7 @@
     <table class="table">
       <thead>
         <tr>
-          <td><%= gravatar_for @food, size: 50 %></td>
+          <td><%= image_tag "#{@food.name}.png" %></td>
           <td><%= @food.name %></td>
           <td><%= @food.price %></td>
           <td><%= @food.description %></td>
