@@ -90,3 +90,14 @@ vi:
       change: "thay đổi"
     form:
       save_change: "Lưu thay đổi"
+  categories:
+    index:
+      title: "Loại món ăn"
+      search: "Tìm kiếm "
+      image: "Ảnh"
+      name: "Tên"
+    show:
+      search: "Tìm kiếm"
+      title: "Các món"
+      image: "Ảnh"
+      name: "Tên"

@@ -90,3 +90,14 @@ en:
       change: "change"
     form:
       save_change: "Save changes"
+  categories:
+    index:
+      title: "Category"
+      search: "Search"
+      image: "Image"
+      name: "Name"
+    show:
+      search: "Search"
+      title: "Foods"
+      image: "Image"
+      name: "Name"

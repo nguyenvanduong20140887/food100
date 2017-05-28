@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170513234457) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
   create_table "category_foods", force: :cascade do |t|
@@ -23,6 +24,9 @@ ActiveRecord::Schema.define(version: 20170513234457) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_category_foods_on_category_id"
+    t.index ["food_id", "category_id"], name: "index_category_foods_on_food_id_and_category_id", unique: true
+    t.index ["food_id"], name: "index_category_foods_on_food_id"
   end
 
   create_table "combo_details", force: :cascade do |t|
@@ -45,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170513234457) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["name"], name: "index_foods_on_name", unique: true
   end
 
   create_table "orderlines", force: :cascade do |t|
