@@ -5,5 +5,6 @@ class CreateCombos < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :combos, :name, unique: true
   end
 end

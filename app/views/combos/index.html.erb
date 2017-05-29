@@ -1,10 +1,9 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
-<%= link_to t(".combo"), combos_path, class: "btn btn-lg btn-primary" %>
 <div class="row">
   <div class="col-md-4">
     <div class="form-group">
-      <%= form_tag categories_path, method: :get, id: "search-form" do %>
+      <%= form_tag combos_path, method: :get, id: "search-form" do %>
       <p>
         <%= text_field_tag :search, params[:search], class: "text_field_tag_style",
           placeholder: t(".search"), size: 15 %>
@@ -21,7 +20,7 @@
           <th><%= t ".name" %></th>
         </tr>
       </thead>
-    <%= render @categories %>
+    <%= render @combos %>
     </table>
   </div>
 </div>

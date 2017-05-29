@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     resources :users
     resources :foods
     resources :categories
+    resources :combos
   end
 end

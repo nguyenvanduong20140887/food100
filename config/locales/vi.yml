@@ -101,3 +101,14 @@ vi:
       title: "Các món"
       image: "Ảnh"
       name: "Tên"
+  combos:
+    index:
+      title: "chuỗi sản phẩm"
+      search: "Tìm kiếm "
+      image: "Ảnh"
+      name: "Tên"
+    show:
+      search: "Tìm kiếm"
+      title: "Các món"
+      image: "Ảnh"
+      name: "Tên"

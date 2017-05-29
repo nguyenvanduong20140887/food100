@@ -1,10 +1,12 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
-<%= link_to t(".combo"), combos_path, class: "btn btn-lg btn-primary" %>
+<% if logged_in? %>
+  <%= link_to t(".new"), new_food_path, class: "btn btn-lg btn-primary" %>
+<% end %>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-3">
     <div class="form-group">
-      <%= form_tag categories_path, method: :get, id: "search-form" do %>
+      <%= form_tag foods_path, method: :get, id: "search-form" do %>
       <p>
         <%= text_field_tag :search, params[:search], class: "text_field_tag_style",
           placeholder: t(".search"), size: 15 %>
@@ -13,7 +15,7 @@
       <% end %>
     </div>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-5">
     <table class="table">
       <thead>
         <tr>
@@ -21,7 +23,20 @@
           <th><%= t ".name" %></th>
         </tr>
       </thead>
-    <%= render @categories %>
+    <%= render @food %>
     </table>
   </div>
+  <% unless logged_in? %>
+    <div class="col-md-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t ".name" %></th>
+            <th><%= t ".price" %></th>
+          </tr>
+        </thead>
+        <%= render "foods/order" %>
+      </table>
+    </div>
+  <% end %>
 </div>

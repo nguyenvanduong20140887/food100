@@ -101,3 +101,14 @@ en:
       title: "Foods"
       image: "Image"
       name: "Name"
+  combos:
+    index:
+      title: "Combo"
+      search: "Search"
+      image: "Image"
+      name: "Name"
+    show:
+      search: "Search"
+      title: "Foods"
+      image: "Image"
+      name: "Name"

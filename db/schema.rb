@@ -34,12 +34,16 @@ ActiveRecord::Schema.define(version: 20170513234457) do
     t.integer  "combo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["combo_id"], name: "index_combo_details_on_combo_id"
+    t.index ["food_id", "combo_id"], name: "index_combo_details_on_food_id_and_combo_id", unique: true
+    t.index ["food_id"], name: "index_combo_details_on_food_id"
   end
 
   create_table "combos", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_combos_on_name", unique: true
   end
 
   create_table "foods", force: :cascade do |t|
